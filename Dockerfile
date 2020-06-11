@@ -10,6 +10,8 @@ RUN curl -s https://getcomposer.org/installer | php
 
 RUN mv composer.phar /usr/local/bin/composer
 
+RUN apt-get update
+
 RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev zlib1g-dev libzip-dev libpq-dev
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
